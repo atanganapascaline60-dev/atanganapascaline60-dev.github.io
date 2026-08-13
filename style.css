@@ -442,8 +442,8 @@ footer p {
 
 
 .photo.jpeg {
-    width: 320px;
-    height: 320px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
 
     display: flex;
@@ -452,8 +452,8 @@ footer p {
 }
 
 .photo.jpeg img{
-    width: 300px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
 
     object-fit: cover;
 
@@ -493,13 +493,13 @@ footer p {
     }
 
     .photo-accueil {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
     .photo.jpeg img {
-        width: 230px;
-        height: 230px;
+        width: 180px;
+        height: 180px;
     }
 
     .texte-accueil {
