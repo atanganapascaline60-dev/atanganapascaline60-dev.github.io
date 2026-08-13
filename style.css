@@ -1,4 +1,6 @@
-
+/* =========================================
+   RÉINITIALISATION
+========================================= */
 
 * {
     margin: 0;
@@ -12,27 +14,32 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f8f9fc;
+    background: #f7f7fb;
     color: #222;
     line-height: 1.6;
 }
 
 
-
+/* =========================================
+   NAVIGATION
+========================================= */
 
 header {
-    width: 100%;
-    background: #ffffff;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    width: 100%;
+    background: #ffffff;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 nav {
     max-width: 1150px;
-    margin: auto;
     min-height: 75px;
+
+    margin: auto;
     padding: 0 25px;
 
     display: flex;
@@ -41,23 +48,27 @@ nav {
 }
 
 nav h2 {
-    font-size: 24px;
     color: #6c4df6;
+    font-size: 24px;
     font-weight: 700;
 }
 
 nav ul {
     display: flex;
+    align-items: center;
+    gap: 28px;
+
     list-style: none;
-    gap: 30px;
 }
 
 nav ul li a {
-    text-decoration: none;
     color: #333;
+    text-decoration: none;
+
     font-size: 15px;
     font-weight: 600;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -65,7 +76,9 @@ nav ul li a:hover {
 }
 
 
-
+/* =========================================
+   SECTIONS
+========================================= */
 
 section {
     max-width: 1150px;
@@ -73,58 +86,130 @@ section {
     padding: 100px 25px;
 }
 
-section h2 {
+section > h2 {
     text-align: center;
+
     font-size: 35px;
-    margin-bottom: 45px;
     color: #222;
+
+    margin-bottom: 45px;
 }
 
-section h2::after {
+section > h2::after {
     content: "";
+
     display: block;
+
     width: 55px;
     height: 4px;
-    background: #6c4df6;
+
     margin: 12px auto 0;
-    border-radius: 10px
-  }
+
+    background: #6c4df6;
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   ACCUEIL
+========================================= */
 
 #accueil {
-    min-height: 90vh;
     max-width: none;
-    padding: 140px 10%;
-    
+    min-height: 90vh;
+
+    padding: 80px 10%;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
 
     background: linear-gradient(
         135deg,
-        #f4f1ff 0%,
+        #f2efff 0%,
         #ffffff 100%
     );
 }
 
+
+/* =========================================
+   PHOTO DE PROFIL
+========================================= */
+
+.photo-accueil {
+    width: 230px;
+    height: 230px;
+
+    flex: 0 0 230px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-accueil img {
+    width: 200px;
+    height: 200px;
+
+    max-width: 200px;
+    max-height: 200px;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #6c4df6;
+
+    box-shadow:
+        0 0 0 6px #ffffff,
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+    transition: transform 0.3s ease;
+}
+
+.photo-accueil img:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================
+   TEXTE DE L'ACCUEIL
+========================================= */
+
+.texte-accueil {
+    flex: 1;
+    max-width: 650px;
+}
+
 #accueil p:first-child {
     color: #6c4df6;
+
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
+
     margin-bottom: 10px;
 }
 
 #accueil h1 {
+    color: #151515;
+
     font-size: 58px;
     line-height: 1.1;
-    color: #171717;
+
     margin-bottom: 15px;
 }
 
 #accueil h2 {
-    text-align: left;
-    font-size: 28px;
     color: #6c4df6;
+
+    font-size: 28px;
+
     margin-bottom: 20px;
 }
 
@@ -132,139 +217,181 @@ section h2::after {
     display: none;
 }
 
-#accueil p:not(:first-child) {
+#accueil p:nth-of-type(2) {
     max-width: 650px;
-    font-size: 18px;
+
     color: #666;
+
+    font-size: 18px;
+
     margin-bottom: 30px;
 }
 
 #accueil a {
     display: inline-block;
+
     padding: 14px 30px;
+
     background: #6c4df6;
-    color: white;
+    color: #ffffff;
+
     text-decoration: none;
+
     border-radius: 8px;
-    font-weight: 600;
-    transition: 0.3s;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
 }
 
 #accueil a:hover {
     background: #5036d4;
+
     transform: translateY(-3px);
 }
 
 
-
+/* =========================================
+   À PROPOS
+========================================= */
 
 #apropos {
-    background: white;
+    background: #ffffff;
 }
 
 #apropos h3 {
     text-align: center;
+
     color: #6c4df6;
+
     font-size: 24px;
+
     margin-bottom: 20px;
 }
 
 #apropos p {
     max-width: 750px;
+
     margin: auto;
+
     text-align: center;
+
     color: #666;
+
     font-size: 17px;
 }
 
 
-#competences {
-    background: #f8f9fc;
-}
+/* =========================================
+   COMPÉTENCES
+========================================= */
 
 #competences {
+    background: #f7f7fb;
+
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 25px;
 }
 
-#competences h2 {
+#competences > h2 {
     width: 100%;
 }
 
-#competences div {
+#competences > div {
     width: 30%;
     min-width: 220px;
+
     padding: 30px 20px;
 
-    background: white;
-    border-radius: 12px;
+    background: #ffffff;
 
     text-align: center;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 12px;
 
-    transition: 0.3s;
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s ease;
 }
 
-#competences div:hover {
+#competences > div:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(108, 77, 246, 0.18);
+
+    box-shadow:
+        0 10px 30px rgba(108, 77, 246, 0.18);
 }
 
 #competences h3 {
     color: #333;
+
     font-size: 19px;
 }
 
 
-
+/* =========================================
+   PROJETS
+========================================= */
 
 #projets {
+    background: #ffffff;
+
     display: flex;
     flex-wrap: wrap;
+
     justify-content: center;
+
     gap: 25px;
-    background: white;
 }
 
-#projets h2 {
+#projets > h2 {
     width: 100%;
 }
 
-#projets div {
+#projets > div {
     width: 30%;
     min-width: 260px;
+
     padding: 30px;
 
+    background: #f7f7fb;
+
     border-radius: 12px;
-    background: #f8f9fc;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
 
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-#projets div:hover {
+#projets > div:hover {
     transform: translateY(-8px);
 }
 
 #projets h3 {
     color: #6c4df6;
+
     font-size: 21px;
+
     margin-bottom: 15px;
 }
 
 #projets p {
     color: #666;
+
     margin-bottom: 20px;
 }
 
 #projets a {
     color: #6c4df6;
+
     text-decoration: none;
-    font-weight: 600;
+
+    font-weight: 700;
 }
 
 #projets a:hover {
@@ -272,40 +399,49 @@ section h2::after {
 }
 
 
-
+/* =========================================
+   CONTACT
+========================================= */
 
 #contact {
-    background: #f8f9fc;
+    background: #f7f7fb;
 }
 
 #contact > p {
     text-align: center;
+
     color: #555;
+
     margin-bottom: 8px;
 }
 
 #contact form {
     max-width: 650px;
+
     margin: 35px auto 0;
 
     display: flex;
     flex-direction: column;
+
     gap: 15px;
 }
 
 #contact input,
 #contact textarea {
     width: 100%;
+
     padding: 15px;
 
     border: 1px solid #ddd;
+
     border-radius: 8px;
+
+    background: #ffffff;
 
     font-family: inherit;
     font-size: 15px;
 
     outline: none;
-    background: white;
 }
 
 #contact input:focus,
@@ -315,233 +451,241 @@ section h2::after {
 
 #contact textarea {
     height: 150px;
+
     resize: vertical;
 }
 
 #contact button {
     padding: 14px;
+
     border: none;
     border-radius: 8px;
 
     background: #6c4df6;
-    color: white;
+    color: #ffffff;
 
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
 
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: 0.3s ease;
 }
 
 #contact button:hover {
     background: #5036d4;
+
+    transform: translateY(-2px);
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
+
 footer {
-    background: #171717;
-    color: white;
-    text-align: center;
     padding: 45px 20px;
+
+    background: #171717;
+
+    color: #ffffff;
+
+    text-align: center;
 }
 
 footer h3 {
     color: #6c4df6;
+
     margin-bottom: 10px;
 }
 
 footer p {
-    color: #aaa;
+    color: #aaaaaa;
+
     margin: 5px 0;
 }
 
 
+/* =========================================
+   TABLETTE
+========================================= */
 
-
-@media (max-width: 800px) {
-
-    nav {
-        flex-direction: column;
-        padding: 20px;
-        gap: 15px;
-    }
-
-    nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+@media (max-width: 900px) {
 
     #accueil {
-        padding: 100px 30px;
+        padding: 80px 6%;
+
+        gap: 40px;
     }
 
     #accueil h1 {
-        font-size: 45px;
+        font-size: 46px;
     }
 
-    #competences div,
-    #projets div {
+    #accueil h2 {
+        font-size: 25px;
+    }
+
+    .photo-accueil {
+        width: 210px;
+        height: 210px;
+
+        flex-basis: 210px;
+    }
+
+    .photo-accueil img {
+        width: 180px;
+        height: 180px;
+
+        max-width: 180px;
+        max-height: 180px;
+    }
+
+    #competences > div,
+    #projets > div {
         width: 45%;
     }
 }
 
 
+/* =========================================
+   TÉLÉPHONE
+========================================= */
 
+@media (max-width: 650px) {
 
-@media (max-width: 600px) {
+    nav {
+        min-height: auto;
 
-    nav h2 {
-        font-size: 21px;
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 15px;
     }
 
     nav ul {
         gap: 12px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
     }
 
     nav ul li a {
         font-size: 13px;
     }
 
+
     section {
         padding: 70px 20px;
     }
 
-    section h2 {
+    section > h2 {
         font-size: 29px;
     }
 
+
+    /* Accueil */
+
     #accueil {
-        min-height: 85vh;
+        min-height: auto;
+
         padding: 80px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+
+    /* Photo téléphone */
+
+    .photo-accueil {
+        width: 190px;
+        height: 190px;
+
+        flex: 0 0 190px;
+    }
+
+    .photo-accueil img {
+        width: 165px;
+        height: 165px;
+
+        max-width: 165px;
+        max-height: 165px;
+    }
+
+
+    /* Texte */
+
+    .texte-accueil {
+        width: 100%;
+        max-width: 100%;
     }
 
     #accueil h1 {
         font-size: 38px;
     }
 
-    #accueil h2{
-        font-size: 23px;
+    #accueil h2 {
+        font-size: 22px;
+
+        text-align: center;
     }
 
-    #accueil p:not(:first-child) {
+    #accueil p:nth-of-type(2) {
         font-size: 16px;
     }
 
-    #competences div,
-    #projets div {
+
+    /* Compétences */
+
+    #competences > div {
         width: 100%;
-    }
-    
 
-#accueil {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-
-.photo.jpeg-accueil {
-    width: 100px;
-    height: 100px;
-    flex-shrink: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.photo.jpeg-accueil img{
-    width: 100px;
-    height: 100px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    border: 6px solid #6c4df6;
-
-    box-shadow:
-        0 0 0 8px white,
-        0 10px 35px rgba(0, 0, 0, 0.20);
-
-    transition: transform 0.4s ease;
-}
-
-
-.photo-accueil img:hover {
-    transform: scale(1.04);
-}
-
-
-
-
-.texte-accueil {
-    flex: 1;
-    max-width: 650px;
-}
-
-
-
-
-@media (max-width: 800px) {
-
-    #accueil {
-        flex-direction: column;
-        text-align: center;
-        gap: 35px;
+        min-width: 0;
     }
 
-    .photo-accueil {
-        width: 200px;
-        height: 200px;
-    }
 
-    .photo.jpeg img {
-        width: 180px;
-        height: 180px;
-    }
+    /* Projets */
 
-    .texte-accueil {
-        max-width: 100%;
+    #projets > div {
+        width: 100%;
+
+        min-width: 0;
+    }
+}
+
+
+/* =========================================
+   PETITS TÉLÉPHONES
+========================================= */
+
+@media (max-width: 400px) {
+
+    #accueil h1 {
+        font-size: 32px;
     }
 
     #accueil h2 {
-        text-align: center;
-    }
-}
-
-#accueil .photo-accueil {
-    width: 220px !important;
-    height: 220px !important;
-    flex: 0 0 220px !important;
-}
-
-#accueil .photo-accueil img {
-    width: 180px !important;
-    height: 180px !important;
-    max-width: 180px !important;
-    max-height: 180px !important;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-
-/* Sur téléphone */
-@media (max-width: 800px) {
-
-    #accueil .photo-accueil {
-        width: 190px !important;
-        height: 190px !important;
-        flex: 0 0 190px !important;
+        font-size: 20px;
     }
 
-    #accueil .photo-accueil img {
-        width: 160px !important;
-        height: 160px !important;
-        max-width: 160px !important;
-        max-height: 160px !important;
+    .photo-accueil {
+        width: 170px;
+        height: 170px;
+
+        flex-basis: 170px;
     }
-}
-    
+
+    .photo-accueil img {
+        width: 150px;
+        height: 150px;
+
+        max-width: 150px;
+        max-height: 150px;
+    }
 }
