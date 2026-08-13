@@ -419,7 +419,7 @@ footer p {
         font-size: 38px;
     }
 
-    #accueil h2 {
+    #accueil h2{
         font-size: 23px;
     }
 
@@ -431,4 +431,83 @@ footer p {
     #projets div {
         width: 100%;
     }
+    
+
+#accueil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+
+.photo.jpeg {
+    width: 320px;
+    height: 320px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo.jpeg img{
+    width: 300px;
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid #6c4df6;
+
+    box-shadow:
+        0 0 0 8px white,
+        0 10px 35px rgba(0, 0, 0, 0.20);
+
+    transition: transform 0.4s ease;
+}
+
+
+.photo-accueil img:hover {
+    transform: scale(1.04);
+}
+
+
+
+
+.texte-accueil {
+    flex: 1;
+    max-width: 650px;
+}
+
+
+
+
+@media (max-width: 800px) {
+
+    #accueil {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .photo-accueil {
+        width: 250px;
+        height: 250px;
+    }
+
+    .photo.jpeg img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .texte-accueil {
+        max-width: 100%;
+    }
+
+    #accueil h2 {
+        text-align: center;
+    }
+}
 }
