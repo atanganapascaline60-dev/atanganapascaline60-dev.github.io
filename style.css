@@ -441,7 +441,7 @@ footer p {
 }
 
 
-.photo.jpeg {
+.photo.jpeg-accueil {
     width: 100px;
     height: 100px;
     flex-shrink: 0;
@@ -451,7 +451,7 @@ footer p {
     justify-content: center;
 }
 
-.photo.jpeg img{
+.photo.jpeg-accueil img{
     width: 100px;
     height: 100px;
 
